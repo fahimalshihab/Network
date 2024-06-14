@@ -255,4 +255,54 @@ IP addresses can be assigned either manually, by entering them physically into a
 
 ![image](https://github.com/fahimalshihab/Network/assets/97816146/61c67e9b-ac94-4aa3-af50-97f36646d74b)
 
+## OSI Model (Open Systems Interconnection)
+
+The OSI model is a conceptual framework that defines how network communication occurs between devices. It consists of seven layers, each with specific functionalities:
+
+**7. Application Layer:**
+
+* **Function:** Provides network services directly to end-user applications.
+* **Examples:** Web browsing (HTTP), file transfer (FTP), email (SMTP, POP), Domain Name System (DNS).
+
+**6. Presentation Layer:**
+
+* **Function:** Prepares data for the application layer by handling formatting, encryption, and compression.
+* **Tasks:** Ensures data is presented in a compatible format for receiving applications.
+
+**5. Session Layer:**
+
+* **Function:** Establishes, manages, and terminates communication sessions between devices.
+* **Tasks:** Sets up connections, ensures data exchange, and closes sessions after data transfer.
+
+**4. Transport Layer:**
+
+* **Function:** Provides reliable data transfer by breaking data into segments, handling errors, and ensuring order of delivery.
+* **Tasks:** Segments data for efficient transmission, reassembles segments at the receiver, implements flow control to manage data rate, and error control to verify data integrity.
+
+**3. Network Layer:**
+
+* **Function:** Routes data packets across networks based on IP addresses.
+* **Tasks:** Breaks data from the transport layer into packets, adds routing information for network traversal, and reassembles packets at the destination. 
+
+**2. Data Link Layer:**
+
+* **Function:** Transmits data frames over the physical network medium.
+* **Sublayers:**
+    * Logical Link Control (LLC): Manages protocols, error checking, and frame synchronization.
+    * Media Access Control (MAC): Identifies devices on the network using MAC addresses and controls access to the physical medium.
+
+**1. Physical Layer:**
+
+* **Function:** Establishes the physical connection between network devices.
+* **Examples:** Ethernet cables, Wi-Fi signals, fiber optic cables.
+
+**Benefits of OSI Model:**
+
+* Standardization: Enables communication between devices from different vendors.
+* Modular Design: Simplifies troubleshooting by isolating issues within specific layers.
+
+
+**Encapsulation:**
+
+As data travels through the OSI layers, it undergoes encapsulation. Each layer adds a header containing information relevant to its function. This header is like an envelope containing the actual data and instructions for the next layer.
 
