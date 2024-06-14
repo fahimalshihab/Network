@@ -309,3 +309,37 @@ The OSI model is a conceptual framework that defines how network communication o
 
 As data travels through the OSI layers, it undergoes encapsulation. Each layer adds a header containing information relevant to its function. This header is like an envelope containing the actual data and instructions for the next layer.
 
+
+# TCP/IP Model
+
+The TCP/IP model is a four-layer (sometimes described as five) suite of protocols defining data transmission over networks like the internet. It offers a simpler and more practical approach compared to the OSI model.
+
+**Layers:**
+
+1. **Network Access Layer (sometimes combined with Data Link Layer):**
+   * Handles physical network connections and Media Access Control (MAC addresses).
+   * Examples: Ethernet, Wi-Fi.
+
+2. **Internet Layer:**
+   * Routes data packets across networks using IP addresses.
+   * Protocol: IP (Internet Protocol)
+
+3. **Transport Layer:**
+   * Provides reliable data transfer between applications.
+   * Protocols: TCP (Transmission Control Protocol) and UDP (User Datagram Protocol).
+     * TCP: Guarantees in-order delivery with error checking and retransmission (reliable).
+     * UDP: Faster but connectionless, suitable for real-time applications (e.g., streaming) (unreliable).
+
+4. **Application Layer:**
+   * Provides network services to applications.
+   * Examples: HTTP (web browsing), FTP (file transfer), SMTP (email), DNS (domain name system).
+
+**Benefits of TCP/IP Model:**
+
+* **Simple and Efficient:** Focuses on practical network communication.
+* **Flexible and Adaptable:** Accommodates diverse network technologies.
+* **Vendor-Independent:** Enables communication between devices from different vendors.
+
+
+
+![tt6b2sau1mdcg73qt4iz](https://github.com/fahimalshihab/Network/assets/97816146/350f49d2-7716-482d-b794-71b0385c6719)
