@@ -229,12 +229,6 @@ Simply, the ARP protocol allows a device to associate its MAC address with an IP
 When devices wish to communicate with another, they will send a broadcast to the entire network searching for the specific device. Devices can use the ARP protocol to find the MAC address (and therefore the physical identifier) of a device for communication.
 ![image](https://github.com/fahimalshihab/Network/assets/97816146/41e030cf-adf9-4413-a290-231fea02f938)
 
-# The DHCP Protocol
-IP addresses can be assigned either manually, by entering them physically into a device, or automatically and most commonly by using a DHCP (Dynamic Host Configuration Protocol) server. When a device connects to a network, if it has not already been manually assigned an IP address, it sends out a request (DHCP Discover) to see if any DHCP servers are on the network. The DHCP server then replies back with an IP address the device could use (DHCP Offer). The device then sends a reply confirming it wants the offered IP Address (DHCP Request), and then lastly, the DHCP server sends a reply acknowledging this has been completed, and the device can start using the IP Address (DHCP ACK).
-
-![image](https://github.com/fahimalshihab/Network/assets/97816146/61c67e9b-ac94-4aa3-af50-97f36646d74b)
-
-
 
 ## How ARP Works
 
@@ -256,3 +250,9 @@ ARP (Address Resolution Protocol) helps translate IP addresses (logical addresse
 
 * **Efficient Communication:** Enables devices to communicate by translating IP addresses to physical addresses.
 * **Dynamic Caching:** ARP caches are updated automatically, adapting to network changes.
+# The DHCP Protocol
+IP addresses can be assigned either manually, by entering them physically into a device, or automatically and most commonly by using a DHCP (Dynamic Host Configuration Protocol) server. When a device connects to a network, if it has not already been manually assigned an IP address, it sends out a request (DHCP Discover) to see if any DHCP servers are on the network. The DHCP server then replies back with an IP address the device could use (DHCP Offer). The device then sends a reply confirming it wants the offered IP Address (DHCP Request), and then lastly, the DHCP server sends a reply acknowledging this has been completed, and the device can start using the IP Address (DHCP ACK).
+
+![image](https://github.com/fahimalshihab/Network/assets/97816146/61c67e9b-ac94-4aa3-af50-97f36646d74b)
+
+
