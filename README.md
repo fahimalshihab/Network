@@ -259,6 +259,9 @@ IP addresses can be assigned either manually, by entering them physically into a
 
 The OSI model is a conceptual framework that defines how network communication occurs between devices. It consists of seven layers, each with specific functionalities:
 
+![image](https://github.com/fahimalshihab/Network/assets/97816146/cf831b18-d9d5-4a8d-8280-8e2316b6b679)
+
+
 **7. Application Layer:**
 
 * **Function:** Provides network services directly to end-user applications.
