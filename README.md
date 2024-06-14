@@ -142,3 +142,117 @@ Ping is a network tool that uses ICMP (Internet Control Message Protocol) packet
 
   ![image](https://github.com/fahimalshihab/Network/assets/97816146/5b73b137-cca7-4758-af58-352c3eb706c6)
 
+# Local Area Network (LAN) Topologies
+Over the years, there has been experimentation and implementation of various network designs. In reference to networking, when we refer to the term "topology", we are actually referring to the design or look of the network at hand. Let's discuss the advantages and disadvantages of these topologies below.
+![image](https://github.com/fahimalshihab/Network/assets/97816146/e6e611ac-89bc-4ad1-9f74-478a8d996416)
+
+
+**Star Topology:**
+
+* **Most common:** Devices connect individually to a central switch/hub.
+* **Advantages:**
+    * Scalable: Easy to add/remove devices.
+    * Reliable: Failure of one device doesn't affect others.
+* **Disadvantages:**
+    * Costly: Requires more cables and central device.
+    * Central device failure disrupts the entire network.
+![image](https://github.com/fahimalshihab/Network/assets/97816146/ed6b555a-720e-4bea-bf25-8909338e1554)
+
+
+**Bus Topology:**
+
+* **Simple and cost-effective:** Devices connect to a single backbone cable.
+* **Advantages:**
+    * Easy to set up: Requires minimal cabling and equipment.
+* **Disadvantages:**
+    * Prone to bottlenecks: All devices share the same bandwidth.
+    * Difficult to troubleshoot: Issues can arise from any device on the bus.
+    * Single point of failure: Backbone cable failure disables the entire network.
+![image](https://github.com/fahimalshihab/Network/assets/97816146/4067b1bd-38e5-47b1-9801-8580473be352)
+
+**Ring Topology:**
+
+* **Devices form a closed loop:** Data travels in one direction, passing through each device.
+* **Advantages:**
+    * Easy to troubleshoot: Fault isolation is simpler.
+    * Less prone to bottlenecks: Traffic is more controlled.
+* **Disadvantages:**
+    * Slower performance: Data may need to travel through multiple devices.
+    * Single point of failure: A break in the loop or device failure disrupts the network.
+ 
+# What is a Switch?
+Switches are dedicated devices within a network that are designed to aggregate multiple other devices such as computers, printers, or any other networking-capable device using ethernet. These various devices plug into a switch's port. Switches are usually found in larger networks such as businesses, schools, or similar-sized networks, where there are many devices to connect to the network. Switches can connect a large number of devices by having ports of 4, 8, 16, 24, 32, and 64 for devices to plug into.
+
+Switches are much more efficient than their lesser counterpart (hubs/repeaters). Switches keep track of what device is connected to which port. This way, when they receive a packet, instead of repeating that packet to every port like a hub would do, it just sends it to the intended target, thus reducing network traffic.
+![image](https://github.com/fahimalshihab/Network/assets/97816146/1a7cea1e-55eb-4704-9951-a3f468554b0a)
+
+Both Switches and Routers can be connected to one another. The ability to do this increases the redundancy (the reliability) of a network by adding multiple paths for data to take. If one path goes down, another can be used. Whilst this may reduce the overall performance of a network because packets have to take longer to travel, there is no downtime -- a small price to pay considering the alternative.
+
+# What is a Router?
+It's a router's job to connect networks and pass data between them. It does this by using routing (hence the name router!).
+
+Routing is the label given to the process of data travelling across networks. Routing involves creating a path between networks so that this data can be successfully delivered.
+
+# Subnetting
+
+Subnetting is the process of dividing a large network (like a /16 IP address block) into smaller, more manageable networks (subnets). It's like subdividing a large apartment complex into smaller buildings, each with its own set of addresses.
+
+**Benefits of Subnetting:**
+
+* **Improved network efficiency:** Allocate IP addresses more efficiently to specific network segments.
+* **Enhanced security:** Isolate network traffic and improve control by creating separate subnets for different departments or functions.
+* **Scalability:** Makes it easier to add new devices to the network without needing to redesign the entire addressing scheme.
+
+**How Subnetting Works:**
+
+Subnetting borrows bits from the host portion of an IP address to create subnets. This is done using a subnet mask, which defines the network portion of the address.
+
+**Example:**
+
+* Original network: 192.168.1.0/16 (has 65,536 potential addresses)
+* Subnet mask: 255.255.255.128 (/25) (creates two subnets)
+* Subnet 1: 192.168.1.0/25 (usable addresses: 192.168.1.1 - 192.168.1.126)
+* Subnet 2: 192.168.1.128/25 (usable addresses: 192.168.1.129 - 192.168.1.254)
+
+
+Routing is useful when devices are connected by many paths, such as in the example diagram below.
+
+![image](https://github.com/fahimalshihab/Network/assets/97816146/6292b1fa-34e3-4dfb-a6b8-5cc34a17e32f)
+
+# The ARP Protocol
+
+
+Recalling from our previous tasks that devices can have two identifiers: A MAC address and an IP address, the Address Resolution Protocol or ARP for short, is the technology that is responsible for allowing devices to identify themselves on a network.
+
+Simply, the ARP protocol allows a device to associate its MAC address with an IP address on the network. Each device on a network will keep a log of the MAC addresses associated with other devices.
+
+When devices wish to communicate with another, they will send a broadcast to the entire network searching for the specific device. Devices can use the ARP protocol to find the MAC address (and therefore the physical identifier) of a device for communication.
+![image](https://github.com/fahimalshihab/Network/assets/97816146/41e030cf-adf9-4413-a290-231fea02f938)
+
+# The DHCP Protocol
+IP addresses can be assigned either manually, by entering them physically into a device, or automatically and most commonly by using a DHCP (Dynamic Host Configuration Protocol) server. When a device connects to a network, if it has not already been manually assigned an IP address, it sends out a request (DHCP Discover) to see if any DHCP servers are on the network. The DHCP server then replies back with an IP address the device could use (DHCP Offer). The device then sends a reply confirming it wants the offered IP Address (DHCP Request), and then lastly, the DHCP server sends a reply acknowledging this has been completed, and the device can start using the IP Address (DHCP ACK).
+
+![image](https://github.com/fahimalshihab/Network/assets/97816146/61c67e9b-ac94-4aa3-af50-97f36646d74b)
+
+
+
+## How ARP Works
+
+ARP (Address Resolution Protocol) helps translate IP addresses (logical addresses) to MAC addresses (physical addresses) on a network. Devices maintain a cache to store these mappings for faster communication.
+
+**The Process:**
+
+1. **Device Needs an IP Address:** A device wants to send data to another device on the network using an IP address.
+2. **ARP Request Broadcast:** The device broadcasts an ARP request message on the network.
+3. **Matching Device Responds:** If a device on the network has the matching IP address, it replies with an ARP response message containing its MAC address.
+4. **Cache Update:** The requesting device receives the reply and stores the IP-to-MAC address mapping in its ARP cache for future reference.
+
+**ARP Messages:**
+
+* **ARP Request:** Broadcasted message asking "Who has this IP address?"
+* **ARP Reply:** Response message containing the corresponding MAC address.
+
+**Benefits of ARP:**
+
+* **Efficient Communication:** Enables devices to communicate by translating IP addresses to physical addresses.
+* **Dynamic Caching:** ARP caches are updated automatically, adapting to network changes.
