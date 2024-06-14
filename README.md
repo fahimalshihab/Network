@@ -340,6 +340,35 @@ The TCP/IP model is a four-layer (sometimes described as five) suite of protocol
 * **Flexible and Adaptable:** Accommodates diverse network technologies.
 * **Vendor-Independent:** Enables communication between devices from different vendors.
 
-
-
 ![tt6b2sau1mdcg73qt4iz](https://github.com/fahimalshihab/Network/assets/97816146/350f49d2-7716-482d-b794-71b0385c6719)
+
+# Differences between IPv4 and IPv6
+
+## IPv4 in a Nutshell
+
+* Introduced in 1981, the first widely used internet protocol version.
+* 32-bit address (e.g., 192.168.1.1).
+* Limited addresses, nearing exhaustion.
+* No built-in security, vulnerable to attacks.
+* Gradually being replaced by the more secure IPv6 with a much larger address space.
+![image](https://github.com/fahimalshihab/Network/assets/97816146/0dd7f6fe-24ff-4644-8b15-f1792ebfb2bc)
+
+## IPv6 in a Nutshell
+
+* Successor to IPv4, designed to address limitations.
+* 128-bit address (written as 8 hex groups: e.g., 2001:db8::1).
+* Vastly larger address space, solving exhaustion issues.
+* Built-in security features for better protection.
+* Transition from IPv4 ongoing, both still in use.
+![image](https://github.com/fahimalshihab/Network/assets/97816146/14377764-7db9-47c2-b406-6dbe7f2f9671)
+
+## Benefits of IPv6
+
+IPv6, the next generation of the Internet Protocol, offers several advantages over IPv4:
+
+* **Larger Address Space:** IPv6 boasts a significantly larger address space compared to IPv4. This vast space can accommodate the ever-increasing number of internet-connected devices, a limitation faced by IPv4.
+* **Enhanced Security:** Built-in security features are a core benefit of IPv6. These features help protect against attacks like spoofing, leading to more secure connections.
+* **Improved Efficiency:**  A simpler header format in IPv6 allows for faster data transfer compared to the more complex header of IPv4.
+* **Better Mobility:**  IPv6 is designed with mobile devices in mind, offering improved support for their specific connection needs.
+* **Quality of Service (QoS):** Stronger support for QoS features enables better traffic management in IPv6. This can potentially improve audio and video quality on websites.
+![image](https://github.com/fahimalshihab/Network/assets/97816146/6614195c-a13a-4877-99be-1c7d2d54f8b9)
