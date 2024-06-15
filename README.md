@@ -372,3 +372,326 @@ IPv6, the next generation of the Internet Protocol, offers several advantages ov
 * **Better Mobility:**  IPv6 is designed with mobile devices in mind, offering improved support for their specific connection needs.
 * **Quality of Service (QoS):** Stronger support for QoS features enables better traffic management in IPv6. This can potentially improve audio and video quality on websites.
 ![image](https://github.com/fahimalshihab/Network/assets/97816146/6614195c-a13a-4877-99be-1c7d2d54f8b9)
+
+# Network Discovery 
+
+Network discovery is the process of identifying and locating devices on a network. It's essential for network administrators to:
+
+* **Map the network:**  Visually represent the network topology (devices & connections).
+* **Maintain inventory:**  Track devices (types, IP addresses).
+* **Enforce access policies:**  Control device access to network resources.
+* **Troubleshoot issues:**  Identify root causes of network problems (outages, security threats).
+
+**Benefits:**
+
+* Improved visibility into the network
+* Streamlined network management
+* Enhanced security posture
+* Efficient troubleshooting
+
+**How it Works:**
+
+Network discovery tools leverage various protocols to find devices:
+
+* **Ping Sweeps:** Sending ICMP echo requests to identify active devices.
+* **IP Scans:** Systematically checking IP address ranges for responses.
+* **SNMP (Simple Network Management Protocol):**  Collecting information from SNMP-enabled devices.
+* **LLDP (Link Layer Discovery Protocol):**  Discovering neighboring devices through direct connections.
+
+**Network Discovery Tools:**
+
+These tools automate discovery, saving time and effort. They offer features like:
+
+* **Automatic device mapping:** Creates visual network maps.
+* **Performance monitoring:** Tracks device health and performance metrics.
+* **QoE monitoring:** Analyzes user experience based on network performance.
+* **Hardware health insights:** Provides information on hardware components (temperature, power supply).
+* **Centralized dashboards:** Offers a single view of all discovered devices and details.
+
+**Types of Discovered Devices:**
+
+* Network devices (switches, routers, firewalls)
+* Servers
+* Printers
+* Virtual machines
+* Software applications
+
+**Network Discovery Protocols:**
+
+* **SNMP:**  The most common protocol for collecting device information.
+* **LLDP:**  Enables neighboring devices to share information.
+* **Ping:**  A simple tool to check if a device is active.
+
+# Nmap
+## What is Nmap?
+
+Nmap (Network Mapper) is a free and open-source network discovery and security auditing tool. It's widely used for tasks like:
+
+* Identifying active hosts on a network
+* Discovering open ports and services
+* Detecting operating systems (OS) running on devices
+* Scanning for vulnerabilities
+
+Nmap works by sending specially crafted packets to target hosts and analyzing the responses to gather information.
+
+**Who uses Nmap?**
+
+* **Network administrators:** Monitor host uptime, manage service updates, and create network inventory.
+* **Security professionals:** Map network architecture, identify vulnerabilities, and support penetration testing.
+
+**Zenmap: Graphical User Interface (GUI)**
+
+Zenmap provides a user-friendly interface to visualize and interact with Nmap scan results. It offers features like:
+
+* Different views for scan data
+* Filtering options
+* Graphing capabilities
+
+**Basic Nmap Syntax**
+
+nmap <Scan Type(s)><Options> <target specification>
+
+
+* **Scan Types:** Specify the type of scan to perform (e.g., TCP connect scan, SYN scan, etc.)
+* **Options:** Customize your scan with various options (e.g., port range, aggressive scan, OS detection)
+* **Target Specification:** Define the target(s) to scan using IP addresses, hostnames, or CIDR notation
+
+**Example Scan:**
+
+nmap 192.168.108.129  # Simple scan of target IP
+
+
+**Nmap Scripting Engine (NSE)**
+
+NSE extends Nmap's functionality by enabling scripts for:
+
+* Brute-force attacks
+* Vulnerability discovery
+* Exploitation
+
+**NSE Script Categories:**
+
+* **Script Execution Time:**
+    * prerule (before scan)
+    * host (during scan)
+    * service (after scanning a host)
+    * postrule (after entire scan)
+* **Script Goals and Safety:**
+    * Broadcast
+    * Authentication
+    * Default
+    * Malware
+    * Discovery
+    * Brute force
+    * DOS
+    * Fuzzer
+    * Exploit
+
+**Running NSE Scripts:**
+
+* `-sC`: Executes all default NSE scripts
+
+**Examples:**
+
+nmap -sC sample.com  # Run all default scripts on a host
+
+nmap --script smb-os-discovery --script-trace sample.com  # Run specific script with tracing
+
+
+**Nmap Integration**
+
+Nmap integrates with other security tools like Metasploit Framework, enhancing penetration testing and security assessments.
+
+**Platforms:**
+
+Nmap is cross-platform compatible and runs on Linux, Windows, macOS, and other Unix-like systems.
+
+**History and Development**
+
+* First released in 1997 as a command-line tool
+* Regular updates and new features
+* Active community of users and developers
+
+Nmap is a powerful tool for network security and remains a valuable asset for various network-related tasks.
+
+# Cybersecurity Fingerprinting: Concept, Insights and Strategies
+**What is cybersecurity fingerprinting?**
+
+* It's a technique to gather information about a system or network by analyzing its unique characteristics.  {fingerprint}
+* This information helps identify the system type, software, and potential vulnerabilities.
+
+**Different fingerprinting techniques:**
+
+* **Active fingerprinting:** Directly interacts with the target system to gather information. {playwright}
+* **Passive fingerprinting:** Analyzes network traffic without interacting with the target system. {eye}
+* **Hybrid fingerprinting:** Combines both active and passive techniques for a more comprehensive view. {yin-yang}
+
+**Benefits of fingerprinting:**
+
+* Helps detect threats and vulnerabilities. {shield}
+* Aids in user authentication. {key}
+* Provides valuable data for network mapping and security measures. {hammer}
+
+**Important fingerprinting tools:**
+
+* **Nmap:** Popular tool for active fingerprinting. {hammer}
+* **p0f:** Focuses on passive fingerprinting by analyzing network traffic. {eye}
+* **XProbe2:** Known for its versatility and accuracy in active fingerprinting. {hammer}
+
+**Legal and ethical considerations:**
+
+* User privacy and consent are crucial. {lock}
+* Fingerprinting data needs to be collected and used responsibly. {balance-scale}
+
+**The future of fingerprinting:**
+
+* Advancements in AI and machine learning will enhance fingerprinting techniques. {brain}
+* Continuous adaptation is necessary to keep pace with evolving threats. {recycle}
+
+**Overall, cybersecurity fingerprinting is a valuable tool for defense against cyberattacks. By understanding its applications and limitations, security professionals can leverage it effectively.**
+
+
+## Why Test a Network?
+
+**Unveiling Network Weaknesses for Enhanced Security**
+
+[shield] Businesses rely on robust networks to function efficiently. However, these networks are susceptible to cyberattacks due to the numerous software applications and devices they interact with. Vulnerabilities arise when weaknesses exist within the network, creating potential entry points for malicious actors. These weaknesses can lurk in various areas, including:
+
+* Servers
+* Firewalls
+* Routers
+* Modems
+* Physical connection ports
+* Operating systems
+* Outdated software
+
+Any of these vulnerabilities can be exploited by cybercriminals to gain unauthorized access to a network and inflict damage on critical business systems.
+
+**Network Security Threats: A Multifaceted Landscape**
+
+The ever-evolving threat landscape necessitates a comprehensive approach to network security. Network vulnerabilities can be exploited through a variety of malicious tactics, including:
+
+* **Malware:** Malicious software designed to disrupt, damage, or steal data.**Active Directory: What and Why**
+
+Active Directory (AD) is a Microsoft technology that helps organizations manage and organize their computer systems, users, and resources. It acts like a digital directory or address book for a network, keeping track of information about users, computers, and other networked devices.
+
+**Key Purposes and Benefits of Active Directory**
+
+* **Centralized Management**: All network resources can be managed and controlled in an organized and centralized manner with the help of Active Directory. Computers, printers, user accounts, and other networked equipment fall under this category.
+* **User Authentication and Authorization**: It functions as a central authentication system, enabling users to log in with just their username and password and granting access according to their roles and permissions on the network.
+* **Security**: Active Directory enables the implementation of security policies and access controls. To ensure that only authorized users have access to particular resources, administrators can establish and enforce security settings.
+* **Group Policy**: Group Policy allows network administrators to apply and enforce settings on several computers at once. This helps in keeping software installations, security settings, and configurations consistent.
+* **Resource Management**: It enables network resources like printers, files, and apps to be arranged and managed in an organized way. This makes it easier for administrators to allocate resources efficiently.
+* **Scalability**: The increase in the size of the organization will not affect the functionality of Active Directory. The directory structure can readily accommodate more users, computers, and resources as the organization expands.
+* **Single sign-on**: Users can utilize a single set of credentials to access a variety of resources and services while using Active Directory. This improves user convenience and streamlines the login procedure.
+
+**Main Terminologies and Components of Active Directory**
+
+* **Objects**: Resources that are present in the AD network are known as objects in Active Directory (AD). These resources include users, PCs, printers, contacts for potential suppliers to the company, and more.
+* **Domain**: A domain is a group of objects, such as users or devices, that share the same AD database.
+* **Tree**: A tree is one or more domains grouped together.
+* **Forest**: A forest is a group of multiple trees.
+* **Organizational Unit (OU)**: Organizational Units (OUs) organize users, groups, and devices. Each domain can contain its own OU.
+* **Containers**: Containers and OUs are comparable but container objects cannot be linked or applied to by Group Policy Objects.
+* **Trust**: By creating an Active Directory trust (AD trust), two different Active Directory domains (or forests) can be connected so that users in one domain can authenticate against resources in the other.
+* **Trusting Domain**: This domain trusts another domain to authenticate users for them.
+* **Trusted Domain**: This domain authenticates users on behalf of another domain.
+* **Domain controller and AD DS Data Store**
+	+ **Domain controller**: Domain controllers are the center of Active Directory. They are in charge of controlling the rest of the domain components.
+	
+	
+		- Functions of Domain controllers
+		
+		
+			+ handles authentication and authorization services
+			+ Synchronize updates from additional domain controllers across the entire forest.
+			+ Grants administrative access for the management of resources within the domain.
+			+ holds the AD DS data store.
+	
+	
+	+ **AD DS Data Store**: All directory information is stored in a data store by the Active Directory directory service. Information on domains, users, groups, machines, organizational units, and security rules are all contained in the directory. The AD DS data store consists of :-
+	
+	
+		- Consists of the Ntds.dit file (Ntds.dit file consist of information about user objects, groups, and group membership. It includes the password hashes for all users in the domain.)
+		- Is stored by default in the %SystemRoot%\NTDS folder on all domain controllers
+		- Is accessible only through the domain controller processes and protocols
+* **Viruses:** Self-replicating programs that spread from one device to another.
+* **Botnets:** Networks of compromised devices controlled by a single attacker.
+* **Keyloggers:** Software that records keystrokes typed on a keyboard.
+* **Ransomware:** Malicious software that encrypts a victim's files and demands a ransom payment for decryption.
+* **SQL injection attacks:** Techniques used to inject malicious code into SQL database queries.
+* **Man-in-the-middle attacks:** Attacks where a malicious actor intercepts communication between two parties.
+* **Phishing attacks and social engineering:** Deceptive tactics used to trick users into revealing sensitive information.
+* **Physical surveillance and sabotage:** Physical access to network infrastructure can be exploited for malicious purposes.
+
+**Safeguarding Business Assets: The Importance of Network Security**
+
+Network security is paramount for protecting a business's sensitive data. This includes:
+
+* Employee and customer personal information
+* Financial data
+* Intellectual property
+
+Data breaches can severely disrupt operations, erode customer trust, and lead to financial losses. Implementing robust network security measures is essential to safeguard these valuable assets.
+# Active Directory
+
+![image](https://github.com/fahimalshihab/Network/assets/97816146/d9f59c93-8261-4e5f-a60e-c2df31e745d7)
+
+**What and Why Active Directory**
+=============================
+
+**What is Active Directory?**
+Active Directory (AD) is a Microsoft technology that helps organizations manage and organize their computer systems, users, and resources. It acts like a digital directory or address book for a network, keeping track of information about users, computers, and other networked devices.
+
+**Why Use Active Directory?**
+Some key purposes and benefits of using Active Directory:
+
+* **Centralized Management**: All network resources can be managed and controlled in an organized and centralized manner with the help of Active Directory.
+* **User Authentication and Authorization**: It functions as a central authentication system, enabling users to log in with just their username and password and granting access according to their roles and permissions on the network.
+* **Security**: Active Directory enables the implementation of security policies and access controls.
+* **Group Policy**: Group Policy allows network administrators to apply and enforce settings on several computers at once.
+* **Resource Management**: It enables network resources like printers, files, and apps to be arranged and managed in an organized way.
+* **Scalability**: The increase in the size of the organization will not affect the functionality of Active Directory.
+* **Single sign-on**: Users can utilize a single set of credentials to access a variety of resources and services while using Active Directory.
+
+**Main Terminologies and Components of Active Directory**
+=====================================================
+
+* **Objects**: Resources that are present in the AD network are known as objects in Active Directory (AD).
+* **Domain**: A domain is a group of objects, such as users or devices, that share the same AD database.
+* **Tree**: A tree is one or more domains grouped together.
+* **Forest**: A forest is a group of multiple trees.
+* **Organizational Unit (OU)**: Organizational Units (OUs) organize users, groups, and devices.
+* **Containers**: Containers and OUs are comparable but container objects cannot be linked or applied to by Group Policy Objects.
+* **Trust**: By creating an Active Directory trust (AD trust), two different Active Directory domains (or forests) can be connected so that users in one domain can authenticate against resources in the other.
+* **Trusting Domain**: This domain trusts another domain to authenticate users for them.
+* **Trusted Domain**: This domain authenticates users on behalf of another domain.
+* **Domain controller and AD DS Data Store**
+  ![image](https://github.com/fahimalshihab/Network/assets/97816146/3197e13e-1e84-45c8-9749-2ce2007cffc5)
+
+	+ **Domain controller**: Domain controllers are the center of Active Directory.
+	+ **AD DS Data Store**: All directory information is stored in a data store by the Active Directory directory service.
+
+**Users and Groups**
+==================
+
+* **Users**: In Active Directory network, there are four basic categories of users; however, based on an organization’s access management practices, more user types may exist.
+	+ **Domain Admins**: These are accounts with administrative privileges at the domain level.
+	+ **Service Accounts**: These accounts are used by services and applications to interact with the domain.
+	+ **Local Administrator**: This refers to an account that has administrative privileges on a specific computer or device.
+	+ **Domain users**: These are standard user accounts that are used by individuals to log in to the domain and access resources for which they have permissions.
+* **GROUPS**: Groups make it easier to give permissions to users and objects by organizing them into groups with specified permissions.
+
+**Domain Trusts and Domain Policies**
+==================================
+
+* **Domain Trust**: A relationship established between two domains in Active Directory that allows users from one domain to access resources in another domain.
+* **Domain Policy**: Typically refers to the security policies and configurations applied to all computers within a specific domain through Group Policy.
+
+**Domain Services**
+================
+
+* **Domain Services**: The rest of the domain or tree receives these services from the domain controller. An extensive range of services can be added to a domain controller.
+	+ **LDAP**: Lightweight Directory Access Protocol; provides communication between applications and directory services.
+	+ **Certificate Services**: Allows the domain controller to create, validate, and revoke public key certificates.
+	+ **DNS, LLMNR, NBT-NS**: Domain Name Services for identifying IP hostnames.
